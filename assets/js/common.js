@@ -35,6 +35,10 @@ $(window).on("load", function() {
 	});
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".preloader").style.display = "none";
+});
+
 $(function() {
 	'use strict';
 
@@ -444,7 +448,7 @@ function setHeightFullSection() {
 // Show or hide the button based on scroll position
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 100) {
+if (window.scrollY > 100) {
     scrollToTopBtn.classList.add('show');
   } else {
     scrollToTopBtn.classList.remove('show');
@@ -482,7 +486,7 @@ function scrollToTop() {
       setTimeout(() => {
         popup.remove();
         overlay.remove();
-      }, 10000);
+      }, 3000);
 
       document.getElementById("cform").reset();
     } else {}        
@@ -502,20 +506,13 @@ function scrollToTop() {
             $('#load-more-btn').show();
             allClicked = true;
         } else {
-            // Hide all items first
             $('.works-col').hide();
-
-            // Show only items matching the category
             $(category).fadeIn();
-
             $('.load-more-link, #load-more-btn').show();
             allClicked = false;
         }
     });
 });
-
-
-  // popup.js
 
 // Function to create the popup dynamically
 function createPopup() {
