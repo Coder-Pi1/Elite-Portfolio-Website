@@ -444,7 +444,6 @@ function setHeightFullSection() {
 } )( jQuery );
 
 // Newly ADDED CODE
-
 // Show or hide the button based on scroll position
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 window.addEventListener('scroll', () => {
@@ -523,7 +522,7 @@ function createPopup() {
               <span class="close-btn">X</span>
               <div class="contacts-form">
                   <h3>Book Your Free Consultation</h3>
-                  <form id="consultationForm">
+                  <form id="cform consultationForm" method="POST" onsubmit="handleButtonClick(event)">
                       <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                           <div class="group">
@@ -564,6 +563,9 @@ function createPopup() {
                         </div>
                       </div>
                   </form>
+				  <div class="alert-success" style="display: none;" id="alert-success">
+                      <p>Your message has been successfully sent, and we’ll respond to you shortly.</p>
+                    </div>
               </div>
           </div>
       </div>

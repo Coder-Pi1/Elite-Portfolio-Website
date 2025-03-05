@@ -446,9 +446,8 @@ body.dark-skin {
 
 .dark-skin .services-item .image,
 .dark-skin .works-item .bg-img,
-.dark-skin .testimonials-item .bg-img,
-.dark-skin .pricing-item .bg-img {
-	opacity: 0.6;
+.dark-skin .testimonials-item .bg-img {
+  opacity: 0.6;
   filter: invert(1);
 }
 
@@ -494,36 +493,7 @@ body.dark-skin {
 	color: #29a587;
 }
 
-/**
-* Section Pricing
-**/
-
-.dark-skin .pricing-item {
-	background: #1d222a;
-	border: 2px solid #1d222a;
-}
-
-.dark-skin .pricing-col.center .pricing-item {
-	border-color: #a3a5a7;
-}
-
-.dark-skin .pricing-col.center .label {
-	color: #fff;
-	border: 2px solid #29a587;
-  box-shadow: 5px 5px 0px 0px rgba(255, 255, 255, 0.1);
-}
-
-.dark-skin .pricing-item .price {
-	color: #fff;
-}
-
-.dark-skin .pricing-item .list ul li em {
-	color: #676767;
-}
-
-/**
-* Section Testimonials
-**/
+/* Section Testimonials */
 
 .dark-skin .testimonials-item {
 	background: #1d222a;
@@ -533,26 +503,7 @@ body.dark-skin {
 	background: #1d222a;
 }
 
-/**
-* Section Blog
-**/
-
-.dark-skin .archive-item .desc h5 a {
-	color: #fff;
-}
-
-.dark-skin .archive-item .desc h5 a:hover {
-	color: #29a587;
-}
-
-.dark-skin .blog-items .archive-item {
-	background: #1d222a;
-}
-
-/**
-* Section Contacts
-**/
-
+/* Section Contacts */
 .dark-skin .numbers-item .icon {
 	border: 2px solid #a3a5a7;
 	background-color: #1d222a;
