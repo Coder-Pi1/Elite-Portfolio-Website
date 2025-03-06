@@ -255,12 +255,12 @@ $(function() {
 				spaceBetween: 20
 			},
 			// when window width is >= 480px
-			767: {
+			773: {
 				slidesPerView: 2,
 				spaceBetween: 30
 			},
 			// when window width is >= 640px
-			1024: {
+			1182: {
 				slidesPerView: 3,
 				spaceBetween: 40
 			}
@@ -524,7 +524,7 @@ function createPopup() {
                   <h3>Book Your Free Consultation</h3>
                   <form id="cform consultationForm" method="POST" onsubmit="handleButtonClick(event)">
                       <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                           <div class="group">
                             <label>
                               Your Full Name <b>*</b>
@@ -532,7 +532,7 @@ function createPopup() {
                             </label>
                           </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                           <div class="group">
                             <label>
                               Your Email Address <b>*</b>

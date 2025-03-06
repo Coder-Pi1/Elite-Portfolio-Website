@@ -1792,6 +1792,7 @@ hr {
 .menu-full {
 	position: relative;
 	padding: 80px 60px 40px 130px;
+	min-height: 300px;
 }
 .menu-full ul {
 	margin: 0;
@@ -2344,7 +2345,7 @@ hr {
 	position: relative;
 }
 .section.hero-started .slide {
-	margin-top: -390px;
+	margin-top: -340px;
 	position: absolute;
 	top: 50%;
 	right: -20px;
@@ -2483,7 +2484,7 @@ hr {
 .section.hero-started .info-list {
 	position: absolute;
 	top: 420px;
-	left: -125px;
+	left: -115px;
 	z-index: 12;
 }
 
@@ -3135,7 +3136,7 @@ hr {
 	width: 100%;
 	height: 180px;
 	object-position: center;
-	object-fit: cover;
+	object-fit:contain;
 	border-radius: 18px;
 }
 
@@ -3154,7 +3155,7 @@ hr {
 }
 
 .testimonials-item .lui-text {
-	min-height: 110px;
+	min-height: 217px;
 }
 
 .testimonials-item .info {
@@ -3381,7 +3382,7 @@ hr {
 }
 
 /* Popup card Single Work */
-.popup-container {
+/* .popup-container {
 	display: none;
     position: fixed;
     top: 50%;
@@ -3422,7 +3423,65 @@ hr {
 		padding: 12px 30px;
 		margin: 0;
 	}
-}
+} */
+
+.popup-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	display: none;
+	max-width: 90%;  
+	max-height: 95%;
+	overflow: auto;
+	z-index: 9999;
+  }
+  
+  /* Adjust the Popup Content */
+  .popup-content {
+	display: block;
+	width: auto; /* This allows it to adjust to content width */
+	height: auto;
+  }
+  
+  /* Close Button Styling */
+  .close-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	font-size: 20px;
+	color: #000;
+  }
+  
+  /* Overlay */
+  .overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	display: none;
+	z-index: 9998;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+	.popup-container {
+	  width: 80%;  /* Adjust the width to 80% of the screen on small screens */
+	  padding: 10px;
+	}
+	.popup-content {
+	  width: 100%; /* Ensure content doesn't overflow */
+	  height: auto; /* Allow the height to auto-adjust to content */
+	}
+  }
+
 .elementor-default .wp-block-gallery {
 	margin: -10px;
 }
@@ -4554,6 +4613,8 @@ a.wp-block-button__link {
 	.section.hero-started .lui-subtitle,
 	.section.hero-started .description {
 		max-width: 350px;
+		line-height: 1.3;
+        margin-top: 10px;
 	}
 }
 
@@ -4651,7 +4712,7 @@ a.wp-block-button__link {
 	.section.hero-started .slide {
 		margin-left: -340px;
 		bottom: auto;
-		top: 800px;
+		top: 730px;
 		right: auto;
 		left: 50%;
 		transform: scale(0.9);
@@ -4897,7 +4958,7 @@ a.wp-block-button__link {
 		font-size: 24px;
 	}
 	.section.hero-started .slide {
-		top: 730px;
+		top: 655px;
 		transform: scale(0.5);
 	}
 	.hero-started .btn-lnk {
@@ -4996,7 +5057,10 @@ a.wp-block-button__link {
 	.elementor-default .wp-block-gallery .wp-block-image {
 		padding: 5px 0;
 	}
-
+	/* testimonials */
+	.testimonials-item .lui-text {
+		min-height: 136px;
+	}
 	/*navigation*/
 	.m-page-navigation, .section.section-inner.m-page-navigation {
 		padding: 60px 0;
