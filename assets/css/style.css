@@ -3172,6 +3172,8 @@ hr {
 }
 .testimonials-item .icon svg{
 	fill: #00c957;
+	stroke: #494949;
+	stroke-width: 2px;
 }
 
 .testimonials-item .lui-text {
