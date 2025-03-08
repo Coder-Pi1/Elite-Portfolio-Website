@@ -251,12 +251,12 @@ body.dark-skin {
 	color: #29a587;
 }
 
-.dark-skin .menu-social-links a {
-	color: #fff;
-}
-
 .dark-skin .menu-social-links a:hover i {
 	color: #29a587;
+}
+
+.dark-skin .menu-social-links a svg {
+	color: #fff;
 }
 
 .dark-skin .header .logo .logotype__title {
@@ -501,6 +501,13 @@ body.dark-skin {
 
 .dark-skin .testimonials-item .icon {
 	background: #1d222a;
+}
+.dark-skin .testimonials-item .info .name {
+	color: #fff;
+}
+
+.dark-skin .testimonials-item .info .position {
+    color: #fff;
 }
 
 /* Section Contacts */
