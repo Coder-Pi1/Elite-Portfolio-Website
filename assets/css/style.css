@@ -72,7 +72,7 @@ body {
 	padding: 0;
 	height: auto !important;
 	font-size: 16px;
-	color: #262626;
+	color: #494949;
 	font-family: "Jost", sans-serif;
 	font-weight: 400;
 	line-height: 1.7;
@@ -1050,13 +1050,13 @@ hr {
   .popup-card p {
     margin: 10px;
     font-size: 12px;
-    color: #333;
+    color: #494949;
   }
   .popup-card h3 {
     margin-bottom: 10px;
     font-size: 22px;
     font-weight: bold;
-    color: #050505;
+    color: #494949;
 	font-family: "Caveat";
   }
   .popup-card.hidden {
@@ -2067,7 +2067,7 @@ hr {
 } 
 .sticky-btn button {
 	background-color: white;
-	color: black;
+	color: #494949;
 	border: none;
 	height: 50px;
 	width: 50px;
@@ -2083,15 +2083,15 @@ hr {
 }
 .sticky-btn button i {
 	font-size: 18px;
-	color: black;
+	color: #494949;
 }
 .sticky-btn button:hover {
 	background-color: #fefeff;
-	color: rgb(2, 2, 2);
+	color: #494949;
 	transform: translateY(-5px);
 } 
 .sticky-btn button:hover i {
-	color: rgb(0, 0, 0); 
+	color: #494949; 
   	z-index: 10;
   	position: relative;
 }
@@ -3403,6 +3403,7 @@ hr {
 .post-content h6 {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
+	color: #494949;
 }
 
 .post-content p+.wp-block-gallery {
