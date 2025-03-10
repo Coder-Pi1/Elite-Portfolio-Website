@@ -87,6 +87,9 @@ body {
 body.no-scroll {
 	overflow: hidden;
 }
+.col-xs-12 .col-sm-12 .col-md-12{
+	width: 95%;
+}
 
 a {
 	color: #00c957;
@@ -298,7 +301,7 @@ a.btn-lnk,
 	display: inline-block;
 	vertical-align: top;
 	font-size: 13px;
-	color: #494949;
+	color: #283e7a;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
@@ -2644,17 +2647,17 @@ hr {
 	cursor: pointer;
 }
   
-  .first-line {
+.skills-item .first-line {
 	display: block;
   }
   
-  .second-line {
+  .skills-item .second-line {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
   }
   
-  .title {
+  .skills-item .title {
 	text-align: left;
 	color: #00c957;
   }
@@ -2731,9 +2734,10 @@ hr {
 }
 
 .services-item .lui-text {
-	max-width: 260px;
-	min-height: 140px;
+	max-width: 90%;
+	min-height: 145px;
 }
+
 .services-item .icon {
 	margin-top: 5px;
 	min-height: 10px;
@@ -3086,12 +3090,6 @@ hr {
 	padding: 20px;
 }
 
-@media (min-width: 300px)  and (max-width: 580px) {
-	.works-box {
-		padding-bottom: 60px;
-		min-height: 1950px
-	  }
-}
 
 /* Section Testimonials */
 .js-testimonials {
@@ -3368,20 +3366,6 @@ hr {
 	letter-spacing: 0.05em;
 }
 
-/* .m-page-navigation .nav-arrow:after {
-	content: '';
-	margin-left: 2px;
-	position: relative;
-	display: inline-block;
-	left: 0;
-	top: 0;
-	width: 12px;
-	height: 20px;
-	background: url(../images/arrow.svg) no-repeat;
-	background-size: contain;
-	opacity: 0.7;
-	filter: invert(1);
-} */
 
 @media screen and (min-width: 1025px) {
 	.m-page-navigation .nav-arrow {
@@ -4602,13 +4586,31 @@ a.wp-block-button__link {
         margin-top: 10px;
 	}
 }
-
+@media (max-width: 400px) {
+	.services-item .lui-text {
+		max-width: 75% !important;
+		min-height: 145px;
+	}
+	.section.hero-started .slide {
+		top: 680px!important;
+	}
+}
 @media (min-width:300px) and (max-width: 849px) {
 	.services-items.services-masonry-items .services-col {
 	  flex: 1 0 50%;                       /* 1 item per row on smaller screens */
 	  margin-left: 20px;
 	}
   }
+  @media (min-width: 300px)  and (max-width: 580px) {
+	.works-box {
+		padding-bottom: 60px;
+		min-height: 1950px
+	  }
+	  .header .logo{
+		width: 110px;
+		height: 28px;
+	  }
+}
   
   @media (min-width:850px) and (max-width: 1275px) {
 	.services-items.services-masonry-items .services-col {
@@ -4706,6 +4708,12 @@ a.wp-block-button__link {
 	.section.hero-started .description {
 		margin: 0 auto;
 	}
+	/* skills  */
+	.skills-items {
+		width: 95%;
+		margin-left: 10px;
+	}
+
 
 	/*works*/
 	.filter-links a {
@@ -4943,8 +4951,14 @@ a.wp-block-button__link {
 		font-size: 24px;
 	}
 	.section.hero-started .slide {
-		top: 655px;
+		top: 650px;
 		transform: scale(0.5);
+	}
+	.section.hero-started .info-list ul li:nth-child(1) {
+		margin: 160px 0 0 120px;
+	}
+	.section.hero-started .info-list ul li:nth-child(2) {
+		margin: -30px 0 0 500px;
 	}
 	.hero-started .btn-lnk {
 		margin-top: 20px;
@@ -4959,6 +4973,17 @@ a.wp-block-button__link {
 		margin-top: 0;
 		height: 40px;
 		width: 2px;
+	}
+	
+	/* services */
+	.services-item .lui-text {
+		max-width: 84%;
+		min-height: 145px;
+	}
+
+	/* skills  */
+	.skills-item .title {
+		max-width: 154px;
 	}
 
 	/*works*/
