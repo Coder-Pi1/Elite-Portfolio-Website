@@ -3152,7 +3152,8 @@ hr {
 	height: 180px;
 	object-position: center;
 	object-fit:contain;
-	border-radius: 18px;
+	border-radius: 10px;
+    background: #fff;
 }
 
 .testimonials-item:first-child {
@@ -4711,7 +4712,6 @@ a.wp-block-button__link {
 	/* skills  */
 	.skills-items {
 		width: 95%;
-		margin-left: 10px;
 	}
 
 
