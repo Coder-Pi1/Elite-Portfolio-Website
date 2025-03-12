@@ -3426,6 +3426,7 @@ hr {
 	cursor: pointer;
 	font-size: 30px;
 	color: #494949;
+	z-index: 3;
   }
   
   /* Overlay */
@@ -4398,7 +4399,7 @@ form.post-password-form label {
 
 @media only screen and (min-width: 1025px) {
 	.portfolio-template .btn {
-	    margin-top: 18px;
+	    margin: 18px;
 	}
 }
 
@@ -4604,7 +4605,7 @@ a.wp-block-button__link {
   }
   @media (min-width: 300px)  and (max-width: 580px) {
 	.works-box {
-		padding-bottom: 60px;
+		padding-bottom: 0;
 		min-height: 1950px
 	  }
 	  .header .logo{
@@ -4872,8 +4873,8 @@ a.wp-block-button__link {
 }
 
 @media screen and (max-width: 767px) {
-	.lui-section-hero {
-		padding-bottom: 120px;
+	.lui-section {
+		padding-bottom: 80px;
 	}
 	.container {
 		padding: 0 20px;
@@ -4976,6 +4977,9 @@ a.wp-block-button__link {
 	}
 	
 	/* services */
+	.services-items.services-masonry-items{
+		margin-top: 15%;
+	}
 	.services-item .lui-text {
 		max-width: 84%;
 		min-height: 145px;
