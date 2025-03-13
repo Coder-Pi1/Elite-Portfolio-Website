@@ -152,10 +152,12 @@ body.dark-skin {
 .dark-skin hr {
 	border-top: 1px solid #777;
 }
+.dark-skin .popup-container,
 .dark-skin .popup-card,
 .dark-skin .popup-content {
 	background-color: #1d222a;
 }
+.dark-skin .close-btn,
 .dark-skin .popup-card p {
 	color: #FFF;
 }

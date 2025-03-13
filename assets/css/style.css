@@ -1,10 +1,10 @@
 /*
-Template Name: Luique
-Template URI: https://bslthemes.com/
-Author: bslthemes
-Author URI: https://themeforest.net/user/bslthemes
-Description: Luique - Resume & Personal Portfolio HTML5 Template
-Version: 1.0
+Template Name: 
+Template URI: 
+Author: 
+Author URI: 
+Description: 
+Version: 
 */
 
 /* TABLE OF CONTENTS
@@ -23,16 +23,11 @@ Version: 1.0
 	|--Section Started Heading
 	|--Section Hero Started
 	|--Section Profile
-	|--Section Resume
 	|--Section Services
 	|--Section Works
-	|--Section Pricing
 	|--Section Testimonials
-	|--Section Blog
 	|--Section Contacts
 	|--Section Project Details
-	|--Section Image Large
-	|--Section Video Large
 	|--Section Navigation
 	|--Section Archive
 	|--Section Sidebar
@@ -2799,6 +2794,9 @@ hr {
 	right: 43%;
 	bottom: 0;
 }
+#works-items .works-item .works-col{
+	visibility: visible;
+}
 .filter-links {
 	margin: 0 0 30px 0;
 	position: relative;
@@ -3252,7 +3250,7 @@ hr {
 .form-comment .group,
 .comment-respond .group {
 	position: relative;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 }
 
 .contacts-form label strong,
@@ -3408,6 +3406,7 @@ hr {
 	max-width: 90%;  
 	max-height: 95%;
 	overflow-y: auto;
+	overflow-x: hidden;
 	z-index: 105;
   }
   
@@ -3424,7 +3423,7 @@ hr {
 	top: 10px;
 	right: 10px;
 	cursor: pointer;
-	font-size: 30px;
+	font-size: 35px;
 	color: #494949;
 	z-index: 3;
   }
@@ -3440,19 +3439,6 @@ hr {
 	display: none;
 	z-index: 104;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-	.popup-container {
-	  width: 80%;  /* Adjust the width to 80% of the screen on small screens */
-	  padding: 10px;
-	}
-	.popup-content {
-	  width: 100%; /* Ensure content doesn't overflow */
-	  height: auto; /* Allow the height to auto-adjust to content */
-	}
-  }
-
 .elementor-default .wp-block-gallery {
 	margin: -10px;
 }
@@ -5118,6 +5104,18 @@ a.wp-block-button__link {
     text-align: center;
     width: 100%;
 	}
+	.popup-container {
+	  width: 80%;  /* Adjust the width to 80% of the screen on small screens */
+	  padding: 10px;
+	}
+	.popup-content {
+	  width: 100%; /* Ensure content doesn't overflow */
+	  height: auto; /* Allow the height to auto-adjust to content */
+	}
+	.close-btn{
+		top: 10px;
+		right: 20px;
+	}
   }
   
 	/*sidebar*/
@@ -5194,7 +5192,9 @@ a.wp-block-button__link {
 		display: block;
 		margin: 5px 0 0 0;
 	}
-	.contacts-form .group, .form-comment .group, .comment-respond .group {
+	.contacts-form .group,
+	.form-comment .group,
+	.comment-respond .group{
 		margin-bottom: 10px;
 	}
 	.comments {

@@ -476,6 +476,7 @@ function scrollToTop() {
   $(document).ready(function () {
     var allClicked = false; 
     $('.works-col:nth-child(n+7)').hide();
+	$('#works-box .works-col:nth-child(n+7)').show();
     $('.filter-links .lui-subtitle').click(function (e) {
         e.preventDefault();
         $('.filter-links .lui-subtitle').removeClass('active');
@@ -483,7 +484,8 @@ function scrollToTop() {
         var category = $(this).data('href');
         if (category === '.works-col' || category === 'all') {
             $('.works-col').show();
-            $('.works-col:nth-child(n+7)').hide();
+            $('.works-box .works-col:nth-child(n+7)').hide();
+			$('#works-box .works-col:nth-child(n+7)').show();
             $('#load-more-btn').show();
             allClicked = true;
         } else {
@@ -494,6 +496,22 @@ function scrollToTop() {
         }
     });
 });
+function filterWorks(category) {
+	const worksBox = document.getElementById('works-box');
+	const worksItems = document.querySelectorAll('.works-col');
+	let visibleItems = 0;
+
+	worksItems.forEach(item => {
+	  if (category === 'all' || item.classList.contains(category)) {
+		item.style.display = 'block';
+		visibleItems++;
+	  } else {
+		item.style.display = 'none';
+	  }
+	});
+
+	worksBox.style.height = (visibleItems * 300) + 'px'; // Adjust the height based on the number of visible items
+  }
 
 // Function to create the popup dynamically
 function createPopup() {
@@ -580,19 +598,4 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('overlay').addEventListener('click', hidePopup);
 });
 
-function filterWorks(category) {
-      const worksBox = document.getElementById('works-box');
-      const worksItems = document.querySelectorAll('.works-col');
-      let visibleItems = 0;
 
-      worksItems.forEach(item => {
-        if (category === 'all' || item.classList.contains(category)) {
-          item.style.display = 'block';
-          visibleItems++;
-        } else {
-          item.style.display = 'none';
-        }
-      });
-
-      worksBox.style.height = (visibleItems * 300) + 'px'; // Adjust the height based on the number of visible items
-    }
