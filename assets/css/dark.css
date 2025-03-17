@@ -105,7 +105,6 @@ body.dark-skin {
 
 .dark-skin input[type="text"],
 .dark-skin input[type="email"],
-.dark-skin input[type="search"],
 .dark-skin input[type="password"],
 .dark-skin input[type="tel"],
 .dark-skin input[type="address"],
@@ -609,23 +608,6 @@ body.dark-skin {
 .dark-skin .col__sedebar .content-sidebar {
 	border-left: 1px solid #666;
 }
-
-.dark-skin .content-sidebar .search-form input[type="text"],
-.dark-skin .content-sidebar .search-form input[type="search"],
-.dark-skin .wp-block-search input[type="text"],
-.dark-skin .wp-block-search input[type="search"],
-.dark-skin .wc-block-product-search__fields input[type="search"] {
-	color: #fff;
-	border: 1px solid #a3a5a7;
-}
-
-.dark-skin .content-sidebar .search-form input.btn_search,
-.dark-skin input.search-submit,
-.dark-skin .wp-block-search .wp-block-search__button,
-.dark-skin .wc-block-product-search .wc-block-product-search__button {
-	filter: invert(1);
-}
-
 .dark-skin .content-sidebar ul li a,
 .dark-skin .post-content .wp-block-archives li a {
 	color: #fff;
