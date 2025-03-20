@@ -277,7 +277,7 @@ $(function() {
 			percentPosition: true,
 		});
 	});
-	// Change it later
+
 	var $gal_container = $('.m-gallery');
 	$gal_container.imagesLoaded(function() {
 		$gal_container.isotope({
@@ -424,8 +424,6 @@ function setHeightFullSection() {
 }
 
 } )( jQuery );
-
-// Newly ADDED CODE
 // Show or hide the button based on scroll position
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 window.addEventListener('scroll', () => {
@@ -438,41 +436,7 @@ if (window.scrollY > 100) {
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-// Contact Me Form Popup Functionality
-  function handleButtonClick(event) {
-    event.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const subject = document.getElementById("subject").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    if (name && email && subject && message) {
-      const alertMessage = document.querySelector("#alert-success p").innerText;
-
-      const overlay = document.createElement("div");
-      overlay.classList.add("overlay", "visible");
-      document.body.appendChild(overlay);
-
-      const popup = document.createElement("div");
-      popup.classList.add("popup-card", "visible");
-      popup.innerHTML = `
-        <img src="assets/images/popup-contactme.png" alt="Success Icon">
-        <h1>Thank You</h1>
-        <h3>Thanks for Reaching Out!</h3>
-        <p>${alertMessage}</p>
-      `
-      ;
-      document.body.appendChild(popup);
-      setTimeout(() => {
-        popup.remove();
-        overlay.remove();
-      }, 3000);
-
-      document.getElementById("cform").reset();
-    } else {}        
-  }
-
+// Function to load more works
   $(document).ready(function () {
     var allClicked = false; 
     $('.works-col:nth-child(n+7)').hide();
@@ -515,87 +479,134 @@ function filterWorks(category) {
 
 // Function to create the popup dynamically
 function createPopup() {
-  let popupHTML = `
-      <div id="overlay" class="overlay"></div>
-      <div id="consultationPopup" class="popup-container">
-          <div class="popup-content">
-              <span class="close-btn">&times;</span>
-              <div class="contacts-form">
-                  <h3>Book Your Free Consultation</h3>
-                  <form id="cform consultationForm" method="POST" onsubmit="handleButtonClick(event)">
-                      <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                          <div class="group">
-                            <label>
-                              Your Full Name <b>*</b>
-                              <input type="text" name="name" id="name" >
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                          <div class="group">
-                            <label>
-                              Your Email Address <b>*</b>
-                              <input type="email" name="email" id="email" >
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                          <div class="group">
-                            <label>
-                              Your Subject <b>*</b>
-                              <input type="text" name="subject" id="subject">
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                          <div class="group">
-                            <label>
-                              Your Message <b>*</b>
-                              <textarea name="message" id="message"></textarea>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-right">
-                          <a href="#" class="btn" onclick="$('#cform').submit(); return false;">
-                            <span>Send Message</span>
-                          </a>
-                        </div>
-                      </div>
-                  </form>
-				  <div class="alert-success" style="display: none;" id="alert-success">
-                      <p>Your message has been successfully sent, and we’ll respond to you shortly.</p>
-                    </div>
-              </div>
-          </div>
-      </div>
-  `;
+	let popupHTML = `
+		<div id="overlay" class="overlay"></div>
+		<div id="consultationPopup" class="popup-container">
+			<div class="popup-content">
+				<span class="close-btn">&times;</span>
+				<div class="contacts-form">
+					<h3>Book Your Free Consultation</h3>
+					<form id="cform" method="POST">
+						<div class="row">
+						  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="group">
+							  <label>
+								Your Full Name <b>*</b>
+								<input type="text" name="name" id="name" required>
+							  </label>
+							</div>
+						  </div>
+						  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="group">
+							  <label>
+								Your Email Address <b>*</b>
+								<input type="email" name="email" id="email" required>
+							  </label>
+							</div>
+						  </div>
+						  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="group">
+							  <label>
+								Your Subject <b>*</b>
+								<input type="text" name="subject" id="subject" required>
+							  </label>
+							</div>
+						  </div>
+						  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="group">
+							  <label>
+								Your Message <b>*</b>
+								<textarea name="message" id="message" required></textarea>
+							  </label>
+							</div>
+						  </div>
+						  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-right">
+							<!-- Use a button instead of an anchor tag -->
+							<button type="submit" class="btn">
+							  <span>Send Message</span>
+							</button>
+						  </div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	`;
+	
+	document.body.insertAdjacentHTML('beforeend', popupHTML);
+  }
   
-  document.body.insertAdjacentHTML('beforeend', popupHTML);
-}
-
-// Function to show popup
-function showPopup() {
-  document.getElementById('consultationPopup').style.display = 'flex';
-  document.getElementById('overlay').style.display = 'block';
-}
-
-// Function to hide popup
-function hidePopup() {
-  document.getElementById('consultationPopup').style.display = 'none';
-  document.getElementById('overlay').style.display = 'none';
-}
-
-// Initialize popup
-document.addEventListener('DOMContentLoaded', function() {
-  createPopup(); // Inject the popup into the page
-
-  document.querySelectorAll('.consultationButton').forEach(button => {
-      button.addEventListener('click', showPopup);
+  // Function to show the consultation popup
+  function showPopup() {
+	document.getElementById('consultationPopup').style.display = 'flex';
+	document.getElementById('overlay').style.display = 'block';
+  }
+  
+  // Function to hide the consultation popup
+  function hidePopup() {
+	document.getElementById('consultationPopup').style.display = 'none';
+	document.getElementById('overlay').style.display = 'none';
+  }
+  
+  // Function to handle form submission
+  function handleButtonClick(event) {
+	event.preventDefault(); // Prevent the form from submitting normally
+  
+	const name = document.getElementById("name").value.trim();
+	const email = document.getElementById("email").value.trim();
+	const subject = document.getElementById("subject").value.trim();
+	const message = document.getElementById("message").value.trim();
+  
+	if (name && email && subject && message) {
+	  const alertMessage = "We have received your message and will get back to you shortly."; // Customize this message
+  
+	  // Create a success popup
+	  const overlay = document.createElement("div");
+	  overlay.classList.add("overlay", "visible");
+	  document.body.appendChild(overlay);
+  
+	  const popup = document.createElement("div");
+	  popup.classList.add("popup-card", "visible");
+	  popup.innerHTML = `
+		<img src="assets/images/popup-contactme.png" alt="Success Icon">
+		<h1>Thank You</h1>
+		<h3>Thanks for Reaching Out!</h3>
+		<p>${alertMessage}</p>
+	  `;
+	  document.body.appendChild(popup);
+  
+	  // Automatically remove the popup and overlay after 3 seconds
+	  setTimeout(() => {
+		popup.remove();
+		overlay.remove();
+	  }, 2300);
+  
+	  // Reset the form
+	  document.getElementById("cform").reset();
+  
+	  // Hide the consultation popup after submission
+	  document.getElementById('consultationPopup').style.display = 'none';
+	  document.getElementById('overlay').style.display = 'none';
+	} else {}
+  }
+  
+  // Initialize the popup on DOM content loaded
+  document.addEventListener('DOMContentLoaded', function() {
+	createPopup(); // Inject the popup into the page
+  
+	// Show consultation popup when the button is clicked
+	document.querySelectorAll('.consultationButton').forEach(button => {
+	  button.addEventListener('click', showPopup);
+	});
+  
+	// Close popup when the close button is clicked
+	document.querySelectorAll('.close-btn').forEach(btn => {
+	  btn.addEventListener('click', hidePopup);
+	});
+	// Hide the popup when clicking on the overlay
+	document.getElementById('overlay').addEventListener('click', hidePopup);
+  
+	// Handle form submission event
+	document.getElementById('cform').addEventListener('submit', handleButtonClick);
   });
-
-  document.querySelector('.close-btn').addEventListener('click', hidePopup);
-  document.getElementById('overlay').addEventListener('click', hidePopup);
-});
-
-
+  

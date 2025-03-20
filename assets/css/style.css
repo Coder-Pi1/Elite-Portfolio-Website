@@ -2786,8 +2786,8 @@ hr {
 
 .testimonials-item .icon {
 	position: absolute;
-	left: 0;
-	top: 0;
+	left: -5px;
+	top: -5px;
 	width: 66px;
 	height: 66px;
 	background: #fff;
@@ -3021,17 +3021,15 @@ hr {
 	max-height: 95%;
 	overflow-y: auto;
 	overflow-x: hidden;
-	z-index: 105;
+	z-index: 111;
   }
   
   /* Adjust the Popup Content */
   .popup-content {
 	display: block;
-	width: auto; /* This allows it to adjust to content width */
+	width: auto;
 	height: auto;
   }
-  
-  /* Close Button Styling */
   .close-btn {
 	position: fixed;
 	top: 10px;
@@ -3040,18 +3038,6 @@ hr {
 	font-size: 35px;
 	color: #494949;
 	z-index: 3;
-  }
-  
-  /* Overlay */
-  .overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.7);
-	display: none;
-	z-index: 104;
   }
 .elementor-default .wp-block-gallery {
 	margin: -10px;
@@ -3440,7 +3426,7 @@ a.post-page-numbers.current,
 	}
 	.section.section-inner.started-heading {
 		padding-top: 170px;
-		padding-bottom: 70px;
+		padding-bottom: 20px;
 	}
 	.section.section-inner.started-heading .m-titles .m-title {
 		font-size: 44px;
@@ -3520,7 +3506,6 @@ a.post-page-numbers.current,
 	.works-items.works-masonry-items {
 		margin-left: 20px;
 		margin-right: 20px;
-		max-height: 800px;
 		max-height: calc(6 * 300px); 
     	overflow: hidden;
 	}
@@ -3582,6 +3567,10 @@ a.post-page-numbers.current,
 		display: block;
 		width: 100%;
 	}
+	.m-gallery,
+	.m-gallery .works-item .image img{
+		height: 450px!important;
+	}
 	.m-details {
 		margin-left: -50px;
 	}
@@ -3593,12 +3582,13 @@ a.post-page-numbers.current,
 		font-size: 24px;
 	}
 	.m-page-navigation, .section.section-inner.m-page-navigation {
-		padding: 60px 0;
+		padding: 40px 0;
 	}
 
 	/*sidebar*/
 	.section.m-page-navigation .nav-arrow {
 		font-size: 30px;
+		margin-bottom: 0;
 	}
 	.menu-btn.default-menu-btn {
 		display: block;
@@ -3812,9 +3802,6 @@ a.post-page-numbers.current,
 	.works-items.works-list-items .works-item .desc .name {
 		font-size: 28px;
 	}
-	.works-item .image img {
-		height: 250px;
-	}
 	.works-box.works-list .works-item .bg-img {
 		display: none;
 	}
@@ -3830,6 +3817,10 @@ a.post-page-numbers.current,
 		display: block;
 		width: 100%;
 	}
+	.m-gallery,
+	.m-gallery .works-item .image img{
+		height: 250px!important;
+	}
 	.post-content .dashed,
 	.post-content p,
 	.post-content li{
@@ -3841,15 +3832,12 @@ a.post-page-numbers.current,
 	}
 	/*navigation*/
 	.m-page-navigation, .section.section-inner.m-page-navigation {
-		padding: 60px 0;
+		padding: 20px 0;
 	}
 	.section.m-page-navigation .nav-arrow {
 		font-size: 20px;
 		line-height: 20px;
-	}
-	.m-page-navigation .nav-arrow {
-		margin-bottom: 15px;
-		font-size: 16px;
+		margin-bottom: 0;
 	}
 
 	/*footer*/

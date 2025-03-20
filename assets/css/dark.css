@@ -269,7 +269,8 @@ body.dark-skin {
 }
 
 .dark-skin .header__builder .logo img,
-.dark-skin .preloader .spinner-logo img {
+.dark-skin .preloader .spinner-logo img,
+.dark-skin .popup-card img {
   filter: brightness(0) invert(1);
 }
 
