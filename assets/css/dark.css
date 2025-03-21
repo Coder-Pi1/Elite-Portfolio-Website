@@ -460,9 +460,12 @@ body.dark-skin {
 .dark-skin .filter-links a {
 	color: #fff;
 }
-
+.dark-skin .filter-links a:hover,
 .dark-skin .filter-links a.active {
-	color: #29a587;
+	color: #00c957!important;
+}
+.dark-skin .filter-links a:hover:before, .dark-skin .filter-links a.active:before {
+	background: #00c957!important;
 }
 
 .dark-skin .works-item .image:before,
