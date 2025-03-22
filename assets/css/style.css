@@ -3362,10 +3362,16 @@ a.post-page-numbers.current,
 	.contacts-form h3{
 		max-width: 80%;
 	}
+	.works-items.works-masonry-items .works-item .desc{
+		min-height: 285px;
+	}
+	.works-items.works-masonry-items .works-item .desc .category{
+		min-height: 45px;
+	}
 }
 @media (max-width: 400px) {
 	.services-item .lui-text {
-		max-width: 75% !important;
+		max-width: 70% !important;
 		min-height: 145px;
 	}
 	.section.hero-started .slide {
@@ -3377,6 +3383,9 @@ a.post-page-numbers.current,
 	/* Work Single */
 	.section.section-inner.started-heading .m-titles .m-title {
 		font-size: 24px!important;
+	}
+	.works-items.works-masonry-items .works-item .desc .category{
+		min-height: 45px;
 	}
 	.section.m-page-navigation .nav-arrow {
 		font-size: 15px!important;
@@ -3532,6 +3541,7 @@ a.post-page-numbers.current,
 		opacity: 1;
 		bottom: 0;
 	}
+
 	.works-items.works-masonry-items .works-item .desc .category .char,
 	.works-items.works-masonry-items .works-item .desc .category .word {
 		-webkit-transform: translate(0, 0) scale(1);
@@ -3899,6 +3909,10 @@ a.post-page-numbers.current,
 	justify-content: center;
     text-align: center;
     width: 100%;
+	line-height: 24px!important;
+	}
+  }
+
 	}
 	.popup-container {
 	  width: 80%;
